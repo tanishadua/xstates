@@ -23,7 +23,7 @@ function App() {
         res.map((item, index) => {
           return {
             id: index,
-            val: `${item.toLowerCase()}`,
+            val: `${item}`,
             country: `${item}`,
           };
         })
@@ -35,10 +35,10 @@ function App() {
   };
   const fetchState = async (val) => {
     try {
-      //console.log(country)
-      //const data = await axios.get(`https://crio-location-selector.onrender.com/country=${val}/states`)
-      //const res = data.data
-      const res = [
+      console.log(country)
+      const data = await axios.get(`https://crio-location-selector.onrender.com/country=${val}/states`)
+      const res = data.data
+      /*const res = [
         "Andhra Pradesh",
         "Arunachal Pradesh",
         "Assam",
@@ -76,7 +76,7 @@ function App() {
         "Ladakh",
         "Lakshadweep",
         "Puducherry",
-      ];
+      ];*/
 
       //console.log(res)
 
@@ -84,7 +84,7 @@ function App() {
         res.map((item, index) => {
           return {
             id: index,
-            val: `${item}`.toLowerCase(),
+            val: `${item}`,
             state: `${item}`,
           };
         })
@@ -98,10 +98,10 @@ function App() {
   };
   const fetchCity = async (val) => {
     try {
-      /*const data = await axios.get(`https://crio-location-selector.onrender.com/country=${country}/state=${val}/cities`)
+      const data = await axios.get(`https://crio-location-selector.onrender.com/country=${country}/state=${val}/cities`)
       const res = data.data
-      console.log(res)*/
-      const res = [
+      console.log(res)
+      /*const res = [
         "Panaji",
         "Margao",
         "Vasco da Gama",
@@ -117,12 +117,12 @@ function App() {
         "Valpoi",
         "Old Goa",
         "Mormugao",
-      ];
+      ];*/
       setCityList(
         res.map((item,index) => {
           return {
             id:index,
-            val: `${item}`.toLowerCase(),
+            val: `${item}`,
             city: `${item}`,
           };
         })
