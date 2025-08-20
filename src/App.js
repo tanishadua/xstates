@@ -193,11 +193,10 @@ function App() {
           </option>
         ))}
       </select>
-      {show && <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-    <h3>You selected</h3>
-    <h1>{cityLabel},</h1>
-    <h3>{stateLabel}, {countryLabel}</h3>
-  </div>}
+      {show && 
+        <p>You selected {` ${cityLabel}`}, 
+    {` ${stateLabel}`}, {` ${countryLabel}`}</p>
+      }
     </div>
   );
 }
